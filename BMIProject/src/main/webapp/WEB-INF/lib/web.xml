@@ -1,0 +1,21 @@
+<web-app>
+    <listener>
+        <listener-class>listener.ContextListener</listener-class>
+    </listener>
+    <filter>
+        <filter-name>BMIInputFilter</filter-name>
+        <filter-class>filter.BMIInputFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>BMIInputFilter</filter-name>
+        <url-pattern>/calculate</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>BMIServlet</servlet-name>
+        <servlet-class>controller.BMIServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BMIServlet</servlet-name>
+        <url-pattern>/calculate</url-pattern>
+    </servlet-mapping>
+</web-app>
